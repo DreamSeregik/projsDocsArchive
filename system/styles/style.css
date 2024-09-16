@@ -1,0 +1,331 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.err-container
+{
+    position: absolute;
+    z-index: 999;
+    height: 30px;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-size: 18pt;
+    display: none;
+   
+
+}
+
+.main-table
+{
+    height: 100vh;
+    width: 100vw;
+    border-collapse: collapse;
+}
+
+.left-menue
+{
+    width: 320px;
+    min-width: 300px;
+    max-width: 320px;
+    background:white;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(128,128,128);
+    vertical-align: top;
+    font-size: 15pt;
+    overflow-y: hidden;
+}
+
+.right-menue
+{
+    position: relative;
+    vertical-align: top;
+    background: rgb(238,238,238);
+    max-height: 100vh;
+    min-height: 100vh;
+  
+    
+}
+
+.left-menue div
+{
+    border-bottom: 1px solid black;
+    font-size: 20pt;
+}
+
+.control
+{
+  text-align: left;
+}
+
+.control img
+{
+    position: relative;
+    left: 5px;
+}
+
+.control span
+{
+    margin: 2px;
+}
+
+.worker
+{
+    width: 100%;  
+	height: 29px; 
+   	color: rgb(149,149,149);
+	cursor: pointer;
+		
+}
+
+.worker-wrapper
+{
+    border: none;
+    overflow-y: auto;
+    height: 100%;
+    max-height: 100%;
+}
+
+.worker-info
+{
+    border-bottom: 1px solid black;
+    height: 55px;
+    min-height: 55px;
+    padding: 15px 0 0 15px;
+    font-size: 20pt;
+    background: white;    
+}
+
+.worker-info span img
+{
+    vertical-align: middle;
+}
+
+.info-tbl
+{
+    background: white;
+    width: 100%;
+    margin: 0 auto 0 auto; 
+    border-collapse: collapse;
+    font-size: 15pt;
+    margin-bottom: 15px;
+}
+
+.pers-info-tbl, .stages, .p-stage, .r-stage, .stages-info, .stages-infoo, .stages-infooo
+{
+    background: white;
+    width: 100%;
+    margin: 0 auto 0 auto; 
+    border-collapse: collapse;
+    font-size: 15pt;
+
+}
+
+.stages td:first-child 
+{
+    border-right: 5px solid black;
+}
+
+.stages th:first-child 
+{
+    border-right: 5px solid black;
+}
+
+.info-tbl tbody
+{
+    background: rgb(255,255,255);
+       
+}
+
+.info-body table 
+{
+    border-collapse: collapse;
+}
+
+.info-body table td
+{
+    border-top: none ;
+    padding: 0 5px 0 5px;
+    background: white;
+}
+
+.info-tbl td, th
+{
+    padding: 0 5px 0 5px;
+}
+
+.info-tbl span
+{
+    margin: 0 3px 0 0 ;
+}
+
+.info-tbl td:first-child
+{
+    font-weight: 700;
+    
+}
+
+.info-tbl td:last-child
+{
+    width: 640px;
+    min-width: 640px;
+    max-width: 640px;
+}
+
+.search>input
+{
+    width: 98%;
+    font-size: 20pt;
+    border: none;
+    outline: none;
+}
+
+.overlay
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.736);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+}
+
+.overlay>table
+{
+    width: 100%;
+    height: 100%;        
+}
+
+.form-brd
+{
+    width: 340px;
+    height: 250px;
+    background: rgb(255, 255, 255);
+    position: relative;
+}
+
+.form-add-stage-brd, .form-edt-stage-brd
+{
+    height: 158px;
+}
+
+.close-mdl, .close-mdl-swap
+{
+    position: absolute;
+    color: rgb(255, 0, 0);
+    top: 0;
+    right: 8px;
+    font-weight: 700;
+    font-size: 18pt;
+    cursor: pointer;
+}
+
+.frm-head
+{
+    font-size: 18pt;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.frm-inp
+{
+    margin-bottom: 5px;
+    font-size: 15pt;
+    width: 302px;
+}
+
+.ab-add-btn, .call-add-btn
+{
+    font-size: 18pt;
+    margin-top: 20px;
+}
+
+.cntrl-ab-btns, .cntrl-calls-btns
+{
+    cursor: pointer;
+}
+
+.call-title
+{
+    background: white;
+    border: 2px solid black;
+    border-top: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18pt;
+}
+
+.ad-call-btn
+{
+    background: white;
+    border: 2px solid black;
+    border-top: none;
+    font-weight: 700;
+    font-size: 18pt;
+    margin-bottom: 20px;
+}
+
+.tbls-call-btns
+{
+    background: white;
+    text-align: right;
+    padding-right: 5px;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.cites
+{
+    cursor: pointer;
+}
+
+.cites-form-brd
+{
+    position: relative;
+    width: 340px;
+    height: 350px;
+    background: rgb(255, 255, 255);
+}
+
+.cites-table
+{    
+    width: 100%;
+
+}
+
+.cites-table tr>td
+{
+    line-height: 12px;
+    height: 12px;
+}
+
+.cites-tbl-scroll-wrp
+{
+    width: 100%;
+    height: 87%;
+    overflow-y: auto;
+}
+
+.cites-tbl-scroll-wrp>div
+{
+    text-align: left;
+    padding-left: 5px;
+}
+
+.form-add-obj
+{
+    height: 700px;
+}
+.stages-add-frm-head 
+{
+    font-weight: 700;
+    font-size: 18pt;
+}
+
