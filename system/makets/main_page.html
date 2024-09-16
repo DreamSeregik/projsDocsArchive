@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/system/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/system/styles/dtp.css">
+    <meta charset="UTF-8">
+    <title>Архив проектной документации</title>
+</head>
+
+<body>
+    <div class="overlay">
+        <table cellspacing="0" cellpadding="0">
+            <tr valign="middle">
+                <td valign="middle" align="center">
+                    <div id="ab-brd" class="form-brd form-add-obj">
+                        <div class="frm-head">Добавить объект</div>
+                        <span class="close-mdl">X</span>
+                        <input id="shifr" class="frm-inp" type="text" placeholder="Шифр"><br>
+                        <input id="gip" class="frm-inp" type="text" placeholder="ГИП"><br>
+                        <input id="zakaz" class="frm-inp" type="text" placeholder="Заказчик"><br>
+                        <input id="cost" class="frm-inp" type="text" placeholder="Стоимость"><br>
+                        <input id="dog-code" class="frm-inp" type="text" placeholder="Код договора"><br>
+                        <select class="frm-inp" id="obj-type">
+                            <option value="0" selected>Тип объекта</option>
+                            <option value="1">Жилой</option>
+                            <option value="2">Промышленный</option>
+                            <option value="3">Общественный</option>
+                        </select><br>
+                        <select class="frm-inp" id="obj-status">
+                            <option value="0" selected>Статус объекта</option>
+                            <option value="1">На рассмотрении</option>
+                            <option value="2">Оплачен. В работе</option>
+                        </select><br>
+                        <input id="date-start" class="frm-inp date_time" type="text"
+                            placeholder="Дата начала работ"><br>
+                        <input id="date-end" class="frm-inp date_time" type="text"
+                            placeholder="Дата окончания работ"><br>
+
+                        <div class="stages-add-frm-head">Этапы</div>
+                        <div class="stages-wrp">
+                            <table id="stages-add-tbl">
+                                <th>П-разделы</th>
+                                <th>Р-разделы</th>
+                            </table>
+                        </div>
+
+
+                        <input id="add-ab-frm-btn" class="ab-add-btn" type="button" value="Добавить">
+                    </div>
+
+                    <div id="call-brd" class="form-brd">
+                        <div class="frm-head">Добавить звонок</div>
+                        <span class="close-mdl">X</span>
+                        <select id="call-add-frm-sel" class="frm-inp">
+                            <option value="-1">Звонил в</option>
+                        </select><br>
+                        <input id="tarif-call-add" readonly="true" class="frm-inp" type="text" placeholder="Тариф"><br>
+                        <input id="date-time-add-call" class="frm-inp date_time" type="text"
+                            placeholder="Дата и время"><br>
+                        <input id="dur" class="frm-inp" type="text" placeholder="Продолжительность"><br>
+                        <input id="call-add-frm-btn" class="call-add-btn" type="button" value="Добавить">
+                    </div>
+
+                    <div id="ed-call-brd" class="form-brd">
+                        <div class="frm-head">Редактировать раздел</div>
+                        <span class="close-mdl">X</span>
+                        <input id="ed-stg-razrab" class="frm-inp" type="text" placeholder="Разработал"><br>
+                        <input id="ed-stg-prov" class="frm-inp" type="text" placeholder="Проверил"><br>
+                        <select class="frm-inp" id="ed-stg-stat">
+                            <option value="0">Закончен</option>
+                            <option value="1">Разрабатывается</option>
+                        </select><br>
+                        <input id="call-ed-frm-btn" class="call-add-btn" type="button" value="Редактировать">
+                    </div>
+
+                    <div id="add-city-brd" class="form-brd form-add-stage-brd">
+                        <div class="frm-head">Добавить раздел</div>
+                        <span class="close-mdl-swap">X</span>
+                        <input id="city-name-ad" class="frm-inp" type="text" placeholder="Название"><br>
+                        <input id="city-add-frm-btn" class="call-add-btn" type="button" value="Добавить">
+                    </div>
+
+                    <div id="edit-ab-brd" class="form-brd form-add-obj">
+                        <div class="frm-head">Редактировать объект</div>
+                        <span class="close-mdl">X</span>
+                        <input id="ed-shifr" class="frm-inp" type="text" placeholder="Шифр"><br>
+                        <input id="ed-gip" class="frm-inp" type="text" placeholder="ГИП"><br>
+                        <input id="ed-zakaz" class="frm-inp" type="text" placeholder="Заказчик"><br>
+                        <input id="ed-cost" class="frm-inp" type="text" placeholder="Стоимость"><br>
+                        <input id="ed-dog-code" class="frm-inp" type="text" placeholder="Код договора"><br>
+                        <select class="frm-inp" id="ed-obj-type">
+                            <option value="0">Тип объекта</option>
+                            <option value="1">Жилой</option>
+                            <option value="2">Промышленный</option>
+                            <option value="3">Общественный</option>
+                        </select><br>
+                        <select class="frm-inp" id="ed-obj-status">
+                            <option value="0" selected>Статус объекта</option>
+                            <option value="1">На рассмотрении</option>
+                            <option value="2">Оплачен. В работе</option>
+                        </select><br>
+                        <input id="ed-date-start" class="frm-inp date_time" type="text"
+                            placeholder="Дата начала работ"><br>
+                        <input id="ed-date-end" class="frm-inp date_time" type="text"
+                            placeholder="Дата окончания работ"><br>
+
+                        <div class="stages-add-frm-head">Этапы</div>
+                        <div class="stages-wrp">
+                            <table id="ed-stages-add-tbl">
+                                <tr>
+                                    <th>П-разделы</th>
+                                    <th>Р-разделы</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <input id="edit-ab-frm-btn" class="ab-add-btn" type="button" value="Редактировать">
+                    </div>
+
+                    <div id="edit-city-brd" class="form-brd form-edt-stage-brd">
+                        <div class="frm-head">Редактировать раздел</div>
+                        <span class="close-mdl-swap">X</span>
+                        <input id="city-name" class="frm-inp" type="text" placeholder="Название"><br>
+                        <input id="edit-city-frm-btn" class="ab-add-btn" type="button" value="Редактировать">
+                    </div>
+
+                    <div id="cites-brd" class="cites-form-brd">
+                        <div class="frm-head">Разделы</div>
+                        <span class="close-mdl">X</span>
+                        <div class="cites-tbl-scroll-wrp">
+                            <div><span><img id="add-city" class="cntrl-ab-btns" width="20px"
+                                        src="/system/styles/pics/add.png" alt="add"></span></div>
+                            <table id="cites-tbl" class="cites-table" border="2">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Название</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table class='main-table' border="2" cellspacing='0' cellpadding='0'>
+        <tr>
+            <td class="left-menue">
+                <div id="cites-main-btn" class="cites">Разделы</div>
+                <div class="control"><span><img id="add-ab" class="cntrl-ab-btns" width="20px"
+                            src="/system/styles/pics/add.png" alt="add"></span><span><img id="del-ab"
+                            class="cntrl-ab-btns" width="20px" src="/system/styles/pics/del.png"
+                            alt="del"></span><span><img id="edit-ab" class="cntrl-ab-btns" width="20px"
+                            src="/system/styles/pics/edit.png" alt="edit"></span></div>
+                <div class="search"><input type="text" placeholder="Поиск"></div>
+                <div class="worker-wrapper">
+
+                </div>
+            </td>
+
+            <td class="right-menue">
+                <div class="err-container"></div>
+                <table class="pers-info-tbl" border="2" cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td>ГИП: </td>
+                        <td style="width: 1500px;" id="GIP"></td>
+                    </tr>
+                    <tr>
+                        <td>Заказчик: </td>
+                        <td style="width: 1500px;" id="Buyer"></td>
+                    </tr>
+                    <tr>
+                        <td>Стоимость: </td>
+                        <td style="width: 1500px;" id="Coast"></td>
+                    </tr>
+                    <tr>
+                        <td>Код договора: </td>
+                        <td style="width: 1500px;" id="dog_code"></td>
+                    </tr>
+                    <tr>
+                        <td>Тип объекта: </td>
+                        <td style="width: 1500px;" id="obj_type"></td>
+                    </tr>
+                </table>
+
+                <div class="call-title">
+                    Ход работ по объекту
+                </div>
+                <table class="pers-info-tbl" border="2" cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td>Начало работ: </td>
+                        <td style="width: 1500px;" id="date_start"></td>
+                    </tr>
+                    <tr>
+                        <td>Окончание работ: </td>
+                        <td style="width: 1500px;" id="date_end"></td>
+                    </tr>
+                </table><br>
+
+                <div>
+                    <table class="stages" border="2" cellspacing='0' cellpadding='0'>
+                        <tr>
+                            <th>Проектная документация</th>
+                            <th>Рабочая документация</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="p-stage" border="2" cellspacing='0' cellpadding='0'>
+                                    <tr>
+                                        <th style="border-right: none;">Раздел</th>
+                                        <th>Разраб.</th>
+                                        <th>Проверил</th>
+                                        <th>Ход работ</th>
+                                    </tr>
+
+                                </table>
+                            </td>
+
+                            <td>
+                                <table class="r-stage" border="2" cellspacing='0' cellpadding='0'>
+                                    <tr>
+                                        <th style="border-right: none;">Раздел</th>
+                                        <th>Разраб.</th>
+                                        <th>Проверил</th>
+                                        <th>Ход работ</th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="stages-info" border="2" cellspacing='0' cellpadding='0'>
+                        <tr>
+                            <td style="width: 50%;">
+                                <table class="stages-infoo" border="2" cellspacing='0' cellpadding='0'>
+
+                                </table>
+                            </td>
+
+                            <td style="width: 50%;">
+                                <table class="stages-infooo" border="2" cellspacing='0' cellpadding='0'>
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </td>
+</body>
+
+</html>
